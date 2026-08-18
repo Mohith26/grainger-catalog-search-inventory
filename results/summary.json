@@ -1,0 +1,50 @@
+{
+  "measured_at": "2026-08-18T00:35:17.729742+00:00",
+  "catalog": {
+    "products": 839,
+    "warehouses": 5,
+    "inventory_rows": 4195
+  },
+  "relevance": {
+    "num_queries": 16,
+    "precision_at_k": {
+      "1": 1.0,
+      "5": 0.9375,
+      "10": 0.8562
+    },
+    "mrr": 1.0,
+    "typo": {
+      "num_queries": 10,
+      "precision_at_k": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 0.96
+      },
+      "mrr": 1.0,
+      "recall_at_k": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      }
+    }
+  },
+  "inventory": {
+    "atp_accuracy": 1.0,
+    "atp_scenarios": 40,
+    "reservation_lifecycle_ok": true,
+    "oversell_units": 0,
+    "oversell_all_ok": true
+  },
+  "security": {
+    "controls_total": 5,
+    "controls_passed": 5,
+    "all_passed": true
+  },
+  "latency": {
+    "search_p50_ms": 8.402,
+    "search_p95_ms": 11.256,
+    "availability_p50_ms": 2.463,
+    "availability_p95_ms": 4.08,
+    "methodology": "in-process ASGI TestClient (excludes network socket)"
+  }
+}

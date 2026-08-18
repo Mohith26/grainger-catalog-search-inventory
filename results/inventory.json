@@ -1,0 +1,52 @@
+{
+  "atp_scenarios": {
+    "total": 40,
+    "correct": 40,
+    "accuracy": 1.0
+  },
+  "reservation_lifecycle": {
+    "steps": 5,
+    "passed": 5,
+    "all_correct": true
+  },
+  "oversell": {
+    "trials": [
+      {
+        "on_hand": 10,
+        "reserve_qty": 1,
+        "concurrent_attempts": 40,
+        "successes": 10,
+        "expected_successes": 10,
+        "reserved_after": 10,
+        "atp_after": 0,
+        "oversell_units": 0,
+        "ok": true
+      },
+      {
+        "on_hand": 10,
+        "reserve_qty": 2,
+        "concurrent_attempts": 30,
+        "successes": 5,
+        "expected_successes": 5,
+        "reserved_after": 10,
+        "atp_after": 0,
+        "oversell_units": 0,
+        "ok": true
+      },
+      {
+        "on_hand": 7,
+        "reserve_qty": 3,
+        "concurrent_attempts": 25,
+        "successes": 2,
+        "expected_successes": 2,
+        "reserved_after": 6,
+        "atp_after": 1,
+        "oversell_units": 0,
+        "ok": true
+      }
+    ],
+    "total_oversell_units": 0,
+    "all_ok": true
+  },
+  "measured_at": "2026-08-18T00:35:17.729742+00:00"
+}

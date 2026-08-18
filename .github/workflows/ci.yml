@@ -1,0 +1,51 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: stockfind
+          POSTGRES_PASSWORD: stockfind
+          POSTGRES_DB: stockfind
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U stockfind -d stockfind"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+
+    env:
+      STOCKFIND_PG_DSN: postgresql://stockfind:stockfind@localhost:5432/stockfind
+      STOCKFIND_JWT_SECRET: ci-secret-key-at-least-32-bytes-long-000
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Lint (ruff)
+        run: ruff check .
+
+      - name: Seed the catalog
+        run: python -m stockfind.catalog.seed
+
+      - name: Tests + coverage
+        run: pytest
+
+      - name: Coverage gate (>= 80%)
+        run: coverage report --fail-under=80

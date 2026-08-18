@@ -1,0 +1,22 @@
+{
+  "methodology": "in-process ASGI TestClient (excludes network socket)",
+  "iterations": 300,
+  "warmup_excluded": 30,
+  "search": {
+    "count": 300,
+    "p50_ms": 8.402,
+    "p95_ms": 11.256,
+    "p99_ms": 14.797,
+    "mean_ms": 8.711,
+    "max_ms": 16.577
+  },
+  "availability": {
+    "count": 300,
+    "p50_ms": 2.463,
+    "p95_ms": 4.08,
+    "p99_ms": 5.421,
+    "mean_ms": 2.65,
+    "max_ms": 8.843
+  },
+  "measured_at": "2026-08-18T00:35:17.729742+00:00"
+}

@@ -1,0 +1,19 @@
+[project]
+name = "stockfind"
+version = "1.0.0"
+description = "B2B industrial-catalog search + multi-warehouse inventory availability API"
+requires-python = ">=3.12"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+extend-exclude = [".venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "C4", "SIM", "UP", "W"]
+# B008: FastAPI's `Depends(...)` / `Query(...)` defaults are idiomatic, not a bug.
+ignore = ["B008"]
+
+[tool.ruff.lint.per-file-ignores]
+# Tests reach into internal helpers and re-import fixtures freely.
+"tests/*" = ["E402"]

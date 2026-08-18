@@ -1,0 +1,36 @@
+# StockFind local stack: Postgres 16 (FTS source of truth) + the FastAPI gateway.
+#   docker compose up -d db          # just the database (run tests/benches on host)
+#   docker compose up -d --build     # database + gateway (one command)
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: stockfind
+      POSTGRES_PASSWORD: stockfind
+      POSTGRES_DB: stockfind
+    ports:
+      - "5470:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U stockfind -d stockfind"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    volumes:
+      - stockfind_pgdata:/var/lib/postgresql/data
+
+  gateway:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      # inside the compose network the DB host is `db`, not localhost
+      STOCKFIND_PG_DSN: postgresql://stockfind:stockfind@db:5432/stockfind
+      STOCKFIND_JWT_SECRET: compose-demo-secret-change-me
+      STOCKFIND_SEED: "42"
+      STOCKFIND_SEED_ON_START: "1"
+    ports:
+      - "8055:8000"
+
+volumes:
+  stockfind_pgdata:

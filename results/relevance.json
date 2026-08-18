@@ -1,0 +1,278 @@
+{
+  "k_values": [
+    1,
+    5,
+    10
+  ],
+  "num_queries": 16,
+  "num_typo_queries": 10,
+  "precision_at_k": {
+    "1": 1.0,
+    "5": 0.9375,
+    "10": 0.8562
+  },
+  "mrr": 1.0,
+  "typo": {
+    "num_queries": 10,
+    "precision_at_k": {
+      "1": 1.0,
+      "5": 1.0,
+      "10": 0.96
+    },
+    "mrr": 1.0,
+    "recall_at_k": {
+      "1": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    }
+  },
+  "per_query": [
+    {
+      "id": "q01",
+      "query": "stainless steel hex bolt",
+      "num_relevant": 72,
+      "precision_at_k": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rr": 1.0,
+      "typo": "staineless steel hex bolt",
+      "typo_precision_at_k": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "typo_rr": 1.0
+    },
+    {
+      "id": "q02",
+      "query": "brass hex nut",
+      "num_relevant": 18,
+      "precision_at_k": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rr": 1.0,
+      "typo": "brass hex nutt",
+      "typo_precision_at_k": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "typo_rr": 1.0
+    },
+    {
+      "id": "q03",
+      "query": "480v circuit breaker",
+      "num_relevant": 36,
+      "precision_at_k": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rr": 1.0,
+      "typo": "480v circut breaker",
+      "typo_precision_at_k": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "typo_rr": 1.0
+    },
+    {
+      "id": "q04",
+      "query": "circuit breaker 20a",
+      "num_relevant": 27,
+      "precision_at_k": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rr": 1.0,
+      "typo": "circuit braker 20a",
+      "typo_precision_at_k": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "typo_rr": 1.0
+    },
+    {
+      "id": "q05",
+      "query": "nitrile work gloves",
+      "num_relevant": 12,
+      "precision_at_k": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rr": 1.0,
+      "typo": "nitrile wrok gloves",
+      "typo_precision_at_k": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "typo_rr": 1.0
+    },
+    {
+      "id": "q06",
+      "query": "leather work gloves",
+      "num_relevant": 12,
+      "precision_at_k": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rr": 1.0
+    },
+    {
+      "id": "q07",
+      "query": "ac motor 5 hp",
+      "num_relevant": 8,
+      "precision_at_k": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 0.8
+      },
+      "rr": 1.0,
+      "typo": "ac moter 5 hp",
+      "typo_precision_at_k": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 0.8
+      },
+      "typo_rr": 1.0
+    },
+    {
+      "id": "q08",
+      "query": "460v ac motor",
+      "num_relevant": 12,
+      "precision_at_k": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rr": 1.0
+    },
+    {
+      "id": "q09",
+      "query": "brass ball valve",
+      "num_relevant": 9,
+      "precision_at_k": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 0.9
+      },
+      "rr": 1.0,
+      "typo": "brass bal valve",
+      "typo_precision_at_k": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 0.9
+      },
+      "typo_rr": 1.0
+    },
+    {
+      "id": "q10",
+      "query": "grinding wheel",
+      "num_relevant": 36,
+      "precision_at_k": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rr": 1.0,
+      "typo": "grindng wheel",
+      "typo_precision_at_k": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "typo_rr": 1.0
+    },
+    {
+      "id": "q11",
+      "query": "amber safety glasses",
+      "num_relevant": 3,
+      "precision_at_k": {
+        "1": 1.0,
+        "5": 0.6,
+        "10": 0.3
+      },
+      "rr": 1.0
+    },
+    {
+      "id": "q12",
+      "query": "adjustable wrench",
+      "num_relevant": 12,
+      "precision_at_k": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rr": 1.0,
+      "typo": "adjustible wrench",
+      "typo_precision_at_k": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "typo_rr": 1.0
+    },
+    {
+      "id": "q13",
+      "query": "ceramic fuse 30a",
+      "num_relevant": 6,
+      "precision_at_k": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 0.6
+      },
+      "rr": 1.0
+    },
+    {
+      "id": "q14",
+      "query": "240v contactor",
+      "num_relevant": 9,
+      "precision_at_k": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 0.9
+      },
+      "rr": 1.0,
+      "typo": "240v contacter",
+      "typo_precision_at_k": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 0.9
+      },
+      "typo_rr": 1.0
+    },
+    {
+      "id": "q15",
+      "query": "ball bearing 20mm",
+      "num_relevant": 2,
+      "precision_at_k": {
+        "1": 1.0,
+        "5": 0.4,
+        "10": 0.2
+      },
+      "rr": 1.0
+    },
+    {
+      "id": "q16",
+      "query": "zinc plated hex nut",
+      "num_relevant": 18,
+      "precision_at_k": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rr": 1.0
+    }
+  ],
+  "measured_at": "2026-08-18T00:35:17.729742+00:00"
+}

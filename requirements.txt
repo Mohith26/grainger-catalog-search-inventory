@@ -1,0 +1,11 @@
+# Runtime deps (StockFind service)
+fastapi>=0.115,<0.200
+uvicorn[standard]>=0.30,<0.40
+psycopg[binary,pool]>=3.2,<3.3
+rapidfuzz>=3.9,<4.0
+pydantic>=2.9,<3.0
+pydantic-settings>=2.5,<3.0
+PyJWT>=2.9,<3.0
+slowapi>=0.1.9,<0.2
+prometheus-client>=0.21,<0.30
+structlog>=24.4

@@ -1,0 +1,55 @@
+{
+  "controls_total": 5,
+  "controls_passed": 5,
+  "all_passed": true,
+  "controls": [
+    {
+      "control": "authentication_required",
+      "check": "POST /reserve without a token",
+      "expected_status": 401,
+      "actual_status": 401,
+      "passed": true
+    },
+    {
+      "control": "role_based_authorization",
+      "check": "buyer -> /admin/reservations (403), admin -> 200",
+      "expected_status": 403,
+      "actual_status": 403,
+      "admin_status": 200,
+      "passed": true
+    },
+    {
+      "control": "input_validation",
+      "check": "quantity=0 body (422) and malformed attr filter (422)",
+      "expected_status": 422,
+      "reserve_qty0_status": 422,
+      "bad_attr_status": 422,
+      "passed": true
+    },
+    {
+      "control": "rate_limiting",
+      "check": "6 rapid /search calls against a 3/minute limiter",
+      "statuses": [
+        200,
+        200,
+        200,
+        429,
+        429,
+        429
+      ],
+      "expected_status": 429,
+      "passed": true
+    },
+    {
+      "control": "sql_injection_safe",
+      "check": "injection in q + attribute filter; parameterized queries",
+      "products_before": 839,
+      "products_after": 839,
+      "injection_query_status": 200,
+      "injection_attr_status": 200,
+      "envelope_ok": true,
+      "passed": true
+    }
+  ],
+  "measured_at": "2026-08-18T00:35:17.729742+00:00"
+}
